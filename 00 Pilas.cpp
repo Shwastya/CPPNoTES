@@ -58,8 +58,8 @@ void pushPila(Node*& pila, int dato)	// PUSH DATOS A PILA :
 {
 	
    Node* newNode = new Node();		// 1. Reservar espacio en memoria para almacenar un nodo.
-   newNode->Dato = dato;			// 2. Cargar el valor dentro del nodo(dato).
-   newNode->Next = pila;			// 3. Cargar el puntero pila dentro del nodo siguiente.
+   newNode->Dato = dato;            // 2. Cargar el valor dentro del nodo(dato).
+   newNode->Next = pila;            // 3. Cargar el puntero pila dentro del nodo siguiente.
    pila = newNode;                  // 4. Asignar el nuevo nodo a pila.
 
    std::cout << "\tPila(Stack) <-- (push) " << dato << " correctly\n";
@@ -68,9 +68,9 @@ void pushPila(Node*& pila, int dato)	// PUSH DATOS A PILA :
 void popPila(Node*& pila, int& dato)	// TAKE DATOS A PILA : (sacar el dato de la pila, eliminar)
 {
 	
-   Node* auxNode = pila;			// 1. Crear una variable auxiliar de tipo nodo e igualarlo a pila.
-   dato = auxNode->Dato;			// 2. n debe ser igual al dato de el auxiliar que coge por ref.
-   pila = auxNode->Next;			// 3. como n se va a eliminar hay que indivar que pila apunte al siguiente
+   Node* auxNode = pila;            // 1. Crear una variable auxiliar de tipo nodo e igualarlo a pila.
+   dato = auxNode->Dato;            // 2. n debe ser igual al dato de el auxiliar que coge por ref.
+   pila = auxNode->Next;            // 3. como n se va a eliminar hay que indivar que pila apunte al siguiente
    delete auxNode;                  // 4. por ultimo podemos borrar del nodo
 
    std::cout << "\tPila(Stack) --> (pop) " << dato << " correctly \n";
@@ -78,12 +78,12 @@ void popPila(Node*& pila, int& dato)	// TAKE DATOS A PILA : (sacar el dato de la
 
 void printPila(Node*& pila)
 {
-	Node* auxNod = pila;
-	std::cout << "\n Print Pila(Stack)\n\n";
-	while (pila != nullptr)
-	{
-		std::cout << "\tPrint:" << pila->Dato << "\n";
-		pila = pila->Next;
-	}
-	pila = auxNod;
+   Node* auxNod = pila;
+   std::cout << "\n Print Pila(Stack)\n\n";
+   while (pila != nullptr)
+   {
+      std::cout << "\tPrint:" << pila->Dato << "\n";
+      pila = pila->Next;
+   }
+   pila = auxNod;
 }
