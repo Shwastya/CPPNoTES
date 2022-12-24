@@ -42,8 +42,8 @@ int main()
    while (front != nullptr)
    {
       int dato{};
-	  popCola(front, end, dato);
-	  std::cout << "\tCola(Queue) --> (pop) " << dato << " correctly \n";
+      popCola(front, end, dato);
+      std::cout << "\tCola(Queue) --> (pop) " << dato << " correctly \n";
    }	
 }
 
