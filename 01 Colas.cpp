@@ -54,10 +54,10 @@ void pushCola(Node*& front, Node*& end, int dato)	// PUSH DATO A COLA
    newNodo->Next = nullptr;                 //	   Siguiente apuntará a NULL
 
    // si cola vacia                         // 3.  Asignar a los punteros frente y fin hacia el nuevo nodo
-   if (front == nullptr) front = newNodo;	//     Si cola vacia, frente = nuevo nodo
-   else end->Next = newNodo;				//     Si cola NO vacia, ya hay un nodo en la cola end->Next = nuevo nodo
+   if (front == nullptr) front = newNodo;   //     Si cola vacia, frente = nuevo nodo
+   else end->Next = newNodo;                //     Si cola NO vacia, ya hay un nodo en la cola end->Next = nuevo nodo
 
-   end = newNodo;							//     Ponemos en end el nuevo nodo
+   end = newNodo;                           //     Ponemos en end el nuevo nodo
 
    std::cout << "\tCola(Queue) <-- (push) " << dato << " correctly\n";
 }
