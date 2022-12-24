@@ -66,13 +66,14 @@ void popCola(Node*& front, Node*& end, int& dato)	// POP DATOS A COLA : (sacar e
 {
    dato = front->Dato;              // 1. Obtener el valor del nodo
    Node* auxNode = front;           // 2. Crear un nodo auxiliar y asignarle el frente de la cola
-	
+
+   // si solo 1 elemento
    if (front == end)                // 3. Eliminar el nodo del frente de la cola
-   {                                //    -caso en que solo hay un elemento- si front == end, solo hay un elemento: 
-      front = nullptr;              //	  front a nullptr
-      end   = nullptr;			    //	  y end a nullptr
+   {                                //    a. caso en que solo hay un elemento 
+      front = nullptr;              //	     front = a nullptr
+      end   = nullptr;              //       y end = a nullptr
    }
-   else                             //    (en caso de que haya mas de un nodo)
+   else                             //    b. caso de que haya mas de un elemento 
    {								
       front = front->Next;          //    entonces front apunta a siguiente (Next)
    }				
