@@ -8,32 +8,32 @@ Las listas enlazadas pueden dividirse en cuatro categorias:
     1. Listas Simplemente Enlazadas: (recorridos directos)
        "Cada nodo contiene un unico enlace que conecta ese nodo al siguiente"	
 
-        ┌───────┬────-┐    ┌───────┬────-┐    ┌───────┬────-┐	 ┌───────┬────-┐
-        │Dato 1 │  p* │-──>│Dato 2 │  p* │-──>│Dato 3 │  p* │-──>│Dato 4 │  p* │
-        └───────┴───-─┘    └───────┴───-─┘    └───────┴───-─┘	 └───────┴───-─┘
+        ┌───────┬─────┐    ┌───────┬─────┐    ┌───────┬─────┐	 ┌───────┬─────┐
+        │Dato 1 │  p* │───>│Dato 2 │  p* │-──>│Dato 3 │  p* │-──>│Dato 4 │  p*│
+        └───────┴─────┘    └───────┴─────┘    └───────┴─────┘	 └───────┴─────┘
         
     2. Listas Doblemente Enlazadas: (recorridos directos e inversos) 
        "Cada nodo contiene dos enlaces, uno al anterior y otro al posterior" 
 
-        ┌───────┬────-┐───>┌───────┬────-┐-──>┌───────┬────-┐-──>┌───────┬────-┐
+        ┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐-──>┌───────┬─────┐
         │Dato 1 │  p* │    │Dato 2 │  p* │    │Dato 3 │  p* │    │Dato 4 │  p* │
-        └───────┴───-─┘<───└───────┴───-─┘<───└───────┴───-─┘<───└───────┴───-─┘
+        └───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘
 
     3. Lista Circular Simplemente Enlazada: (recorrido circular en anillo)
        "El ultimo elemento (cola) se enlaza al primero (cola)"       
 
-        ┌───────┬────-┐    ┌───────┬────-┐    ┌───────┬────-┐	 ┌───────┬────-┐
+        ┌───────┬─────┐    ┌───────┬─────┐    ┌───────┬─────┐	 ┌───────┬─────┐
      ┌─>│Dato 1 │  p* │-──>│Dato 2 │  p* │-──>│Dato 3 │  p* │-──>│Dato 4 │  p* │─┐
-     │  └───────┴───-─┘    └───────┴───-─┘    └───────┴───-─┘	 └───────┴───-─┘ │
+     │  └───────┴─────┘    └───────┴─────┘    └───────┴─────┘	 └───────┴─────┘ │
      └───────────────────────────────────────────────────────────────────────────┘ 
 
     4. Lista Circular Doblemente Enlazada: (recorrido en anillo directa e inversa)
        "El ultimo elemento (cola) se enlaza al primero (cola) y viceversa"
 
      ┌────────────────────────────────────────────────────────────────────────────┐
-     └──┌───────┬────-┐───>┌───────┬────-┐-──>┌───────┬────-┐-──>┌───────┬────-┐<─┘
+     └──┌───────┬─────┐───>┌───────┬─────┐-──>┌───────┬─────┐-──>┌───────┬─────┐<─┘
         │Dato 1 │  p* │    │Dato 2 │  p* │    │Dato 3 │  p* │    │Dato 4 │  p* │
-     ┌─>└───────┴───-─┘<───└───────┴───-─┘<───└───────┴───-─┘<───└───────┴───-─┘──┐
+     ┌─>└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘──┐
      └────────────────────────────────────────────────────────────────────────────┘
 
      Hay 4 operaciones fundamentales en listas enlazadas:
@@ -201,13 +201,10 @@ void deleteDatoLista(Node*& lista, int dato)
 
 void eliminarLista(Node*& lista)
 {
-   
-
    while (lista != nullptr)
    {
       Node* aux = lista;
       lista = aux->Next;
-      delete aux;
-        
+      delete aux;        
    }
 }
