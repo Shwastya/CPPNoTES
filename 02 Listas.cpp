@@ -15,23 +15,23 @@ Las listas enlazadas pueden dividirse en cuatro categorias:
     2. Listas Doblemente Enlazadas: (recorridos directos e inversos) 
        "Cada nodo contiene dos enlaces, uno al anterior y otro al posterior" 
 
-        ┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐-──>┌───────┬─────┐
+        ┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐
         │Dato 1 │  p* │    │Dato 2 │  p* │    │Dato 3 │  p* │    │Dato 4 │  p* │
         └───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘
 
     3. Lista Circular Simplemente Enlazada: (recorrido circular en anillo)
        "El ultimo elemento (cola) se enlaza al primero (cola)"       
 
-        ┌───────┬─────┐    ┌───────┬─────┐    ┌───────┬─────┐	 ┌───────┬─────┐
-     ┌─>│Dato 1 │  p* │-──>│Dato 2 │  p* │-──>│Dato 3 │  p* │-──>│Dato 4 │  p* │─┐
-     │  └───────┴─────┘    └───────┴─────┘    └───────┴─────┘	 └───────┴─────┘ │
-     └───────────────────────────────────────────────────────────────────────────┘ 
+        ┌───────┬─────┐    ┌───────┬─────┐    ┌───────┬─────┐	  ┌───────┬─────┐
+     ┌─>│Dato 1 │  p* │───>│Dato 2 │  p* │───>│Dato 3 │  p* │───>│Dato 4 │  p* │──┐
+     │  └───────┴─────┘    └───────┴─────┘    └───────┴─────┘	  └───────┴─────┘  │
+     └────────────────────────────────────────────────────────────────────────────┘ 
 
     4. Lista Circular Doblemente Enlazada: (recorrido en anillo directa e inversa)
        "El ultimo elemento (cola) se enlaza al primero (cola) y viceversa"
 
      ┌────────────────────────────────────────────────────────────────────────────┐
-     └──┌───────┬─────┐───>┌───────┬─────┐-──>┌───────┬─────┐-──>┌───────┬─────┐<─┘
+     └──┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐───>┌───────┬─────┐<─┘
         │Dato 1 │  p* │    │Dato 2 │  p* │    │Dato 3 │  p* │    │Dato 4 │  p* │
      ┌─>└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘<───└───────┴─────┘──┐
      └────────────────────────────────────────────────────────────────────────────┘
@@ -43,6 +43,7 @@ Las listas enlazadas pueden dividirse en cuatro categorias:
        3. Buscar un elemento
        4. Eliminar un elemento
 */
+
 struct Node
 {
    int Dato;
@@ -107,7 +108,6 @@ void pushIncreasingLista(Node*& lista, int dato)    // PUSH DATOS A PILA:
 
    std::cout << "\tLista(List) <-- (push)Increasing " << dato << " correctly\n";
 }
-
 
 void pushDecreasingLista(Node*& lista, int dato)
 {
