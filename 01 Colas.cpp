@@ -2,12 +2,12 @@
 #include <cstdint>
 /*--------------------- Colas FIFO (First In First Out) -----------------------
 
- Node (frente)  	Node	  	      Node		  		Node (final)		  
-┌───────────-─┐    ┌───────────-─┐    ┌───────────-─┐   ┌───────────-─┐   
-│ dato		  │    │ dato		 │    │ dato		│   │ dato		  │   
-├────────────-┤	   ├────────────-┤	  ├────────────-┤	├────────────-┤	  
-│ Node next*  ├-──>│ Node next*  ├-──>│ Node next*  ├-->│ Node next*  ├
-└───────────-─┘	   └───────────-─┘	  └───────────-─┘	└───────────-─┘	   
+ Node (frente)		Node				Node				Node (final)		  
+┌─────────────┐	    ┌─────────────┐		┌─────────────┐		┌─────────────┐   
+│ dato		  │		│ dato		  │		│ dato		  │		│ dato		  │   
+├─────────────┤		├─────────────┤		├─────────────┤		├─────────────┤	  
+│ Node next*  ├───>	│ Node next*  ├───>	│ Node next*  ├───>	│ Node next*  │
+└─────────────┘		└─────────────┘		└─────────────┘		└─────────────┘	   
 
 Una cola en programación con C++ es una estructura de datos, caracterizada por 
 ser una secuencia  de elementos  en la que la operación de inserción (push) se 
