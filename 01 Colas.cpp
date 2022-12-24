@@ -2,7 +2,7 @@
 #include <cstdint>
 /*--------------------- Colas FIFO (First In First Out) -----------------------
 
- Node (frente)      Node                Node                Node (final)		  
+Node (frente)       Node                Node                Node (final)		  
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐   
 │ dato        │     │ dato        │     │ dato        │     │ dato        │   
 ├─────────────┤     ├─────────────┤     ├─────────────┤     ├─────────────┤	  
