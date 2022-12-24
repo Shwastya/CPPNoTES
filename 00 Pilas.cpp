@@ -57,7 +57,7 @@ int main()
 void pushPila(Node*& pila, int dato)	// PUSH DATOS A PILA :
 {
 	
-   Node* newNode = new Node();		// 1. Reservar espacio en memoria para almacenar un nodo.
+   Node* newNode = new Node();      // 1. Reservar espacio en memoria para almacenar un nodo.
    newNode->Dato = dato;            // 2. Cargar el valor dentro del nodo(dato).
    newNode->Next = pila;            // 3. Cargar el puntero pila dentro del nodo siguiente.
    pila = newNode;                  // 4. Asignar el nuevo nodo a pila.
